@@ -1,9 +1,9 @@
+import Hero from "./components/Hero";
+
 const App = () => {
   return (
-    <main className="">
-      <h1 className="font-zentry-regular text-5xl text-violet-300 font-bold">
-        Welcome to Awards
-      </h1>
+    <main className="relative min-h-screen w-screen overflow-x-hidden">
+      <Hero />
     </main>
   );
 };
