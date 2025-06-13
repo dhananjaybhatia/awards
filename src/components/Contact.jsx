@@ -8,6 +8,15 @@ const ImageClickBox = ({ src, clipClass }) => (
 );
 
 const Contact = () => {
+  const handleContact = () => {
+    const subject = encodeURIComponent("Contact Request");
+    const body = encodeURIComponent(
+      `Hi Dhananjay,\n\nI came across your profile and would love to get in touch.\n\nLet me know a convenient time for you.\n\nBest regards,\n[Your Name]`
+    );
+
+    window.location.href = `mailto:dhananjaybhatia@yahoo.co.in?subject=${subject}&body=${body}`;
+  };
+
   return (
     <div id="contact" className="my-20 min-h-96 w-screen px-10">
       <div className="relative rounded-lg bg-black py-24 sm:overflow-hidden text-blue-50">
@@ -39,7 +48,8 @@ const Contact = () => {
             <b>t</b>her
           </p>
           <Button
-            title={"contact us"}
+            onClick={handleContact}
+            title={"contact me"}
             containerClass={"mt-10 cursor-pointer"}
           />
         </div>
